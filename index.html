@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Bitmap Array Generator</title>
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="favicon.png" sizes="16x16">
+	</head>
+	<body>
+		<div id="configure" class="maindiv">
+			<h1>Bitmap Array Generator</h1>
+			<br>
+			<h3>Specify the number of columns</h3>
+			<input type="number" id="gridsize" value="10">
+			<br>
+			<h4>Cell Types:</h4>
+			<div id="pillholder"></div>
+			<button onclick="createGraph()" class="button primary">Generate Array Grid</button>
+			<button onclick="importArray()" class="button primary">Import Array Grid</button>
+			<button onclick="addType()" class="button">Add another type</button>
+		</div>
+		<div id="canvas" style="visibility: hidden" class="maindiv" >
+			<h3>Click and drag to draw || select color from below || press B to toggle cell borders</h3>
+			<center>
+				<canvas id="myCanvas" width=600 height=600></canvas>
+				<br>
+				<div id="selector" style="margin: 5px"></div>
+				<br>
+				<button onclick="generateArray()" class="button primary">Generate Array</button>
+				<button onclick="clearSelections()" class="button">Clear Selections</button>
+				<button onclick="changeArraySize()" class="button">Re-Configure</button>
+			</center>
+		</div>
+		<div id="copytext" class="maindiv" style="visibility: hidden">
+			<h3>Array generated!</h3>
+			<textarea id="arraytext"></textarea>
+			<p></p>
+			<div id="colorArray" style="margin: 50px;"></div>
+			<button onclick="copyArray()" class="button primary">Copy Array</button>
+			<button onclick="createGraph(true)" class="button">Back to Canvas</button>
+		</div>
+		<footer>Made by Tuhinshubhra</footer>
+	</body>
+	<script src="script.js"></script>
+</html>
